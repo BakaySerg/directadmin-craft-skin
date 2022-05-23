@@ -81,12 +81,19 @@ html.vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f7f7f7;
+    background-color: #505A74;
+    color: #fff;
     font-size: 2rem;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     position: relative;
-    color: var(--color-active);
+    z-index: 1;
+}
+@media (min-width: 1024px){
+    html.vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader {
+        top: -10px;
+        border-radius: 3px 3px 0 0;
+    }
 }
 .vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader::before,.vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader::after {
     content: '';
@@ -95,12 +102,13 @@ html.vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader {
     width: 3em;
     top: 0;
     background-color: inherit;
+    z-index: -1;
 }
 .vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader::before {
-    right: 100%;
+    right: 97%;
 }
 .vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader::after {
-    left: 100%;
+    left: 97%;
 }
 html.vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader .icon {
     max-width: 14px;
@@ -318,6 +326,7 @@ html.vue-app .dashboard.mobile .dashboard-mobile {
     background-color: #fff;
     padding-bottom: 2rem;
     overflow: hidden;
+    border-radius: 3px;
 }
 html.vue-app .dashboard.mobile .dashboard-mobile .access-level-switch {
     display: flex;

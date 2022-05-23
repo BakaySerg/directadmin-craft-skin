@@ -1218,7 +1218,12 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
    top: 50%;
 	transform: translateY(-52%);
    right: 1.8rem;
-   z-index: 3
+   z-index: 3;
+   padding: 0.5em;
+}
+.icons-grid .filters-bar>.filters-bar-search>.search-icon .svg-icon {
+   min-width: 16px;
+   min-height: 16px;
 }
 .icons-grid .icons-grid-content {
    padding: 0 1rem;
