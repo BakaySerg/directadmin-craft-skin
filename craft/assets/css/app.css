@@ -1205,6 +1205,11 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
    position: relative;
 	flex-grow: 1;
 }
+@media (min-width: 1025px){
+   .icons-grid .filters-bar>.filters-bar-search {
+      box-shadow: -1px 1px 10px rgba(30,23,104,.04);
+   }
+}
 .icons-grid .filters-bar>.filters-bar-search .inputGroup {
    min-width: 32rem
 }
@@ -1336,7 +1341,7 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
 .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-icon {
    width: 4.6em;
    height: 4.6em;
-   margin-bottom: .8rem
+   margin-bottom: .2rem
 }
 @media (max-width: 700px){
    .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-icon {
@@ -3778,6 +3783,9 @@ body.\--sidebar-layout .master-login-bar {
       top: calc(100% + 1.4rem);
       border-bottom: 1px solid #e0e0e0;
    }
+   .app-page-header + * .app-page-header:after,.app-page-header + .app-page-header:after,.pageSection + .pageSection .app-page-header:after {
+      content: none;
+   }
 }
 .vue-app .app-page-header .app-page-header-title {
    overflow: hidden;
@@ -6218,6 +6226,7 @@ html.vue-app.dir\:rtl .r-table-grid-columns .column-header.\--sortable h3 {
    left: 0;
    right: 0;
    z-index: 3;
+   min-height: 4.3rem;
    background-color: #505A74;
    border-top-left-radius: 4px;
    border-top-right-radius: 4px;
@@ -6594,7 +6603,7 @@ html.vue-app.dir\:rtl .ui-vertical-table .ui-vertical-table-row .ui-vertical-tab
    }
 }
 .ui-tabs .ui-tabs-header-tab {
-   flex: 1;
+   flex: .32 .2 auto;
    border-bottom: 1px solid #e0e0e0;
    background-color: #fcfcfc;
 	border-radius: 6px 6px 0 0;
@@ -6613,7 +6622,8 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header-tab-content {
    font-size: 1.4rem;
    font-weight: 700;
    line-height: 19px;
-   align-items: center
+   align-items: center;
+   justify-content: center;
 }
 .ui-tabs .ui-tabs-header-tab-label>.icon {
    transform: rotate(-90deg);
@@ -7772,6 +7782,14 @@ html.vue-app.mobile--disabled body.-has-overlay {
 .vue-app .fx\:dir\:column-rev.fx\:dir\:column-rev {
    flex-direction: column-reverse
 }
+.fx\:equalWidth\:true {
+   padding-left: 1.4rem;
+   padding-right: 1.4rem;
+   gap: 1.7rem;
+}
+.fx\:equalWidth\:true button.button {
+   margin: 0 !important;
+}
 .vue-app .fx\:wrap\:true.fx\:wrap\:true {
    flex-wrap: wrap
 }
@@ -7803,6 +7821,9 @@ html.vue-app.mobile--disabled body.-has-overlay {
    align-items: flex-end
 }
 .vue-app .fx\:cross\:center.fx\:cross\:center {
+   align-items: center;
+}
+.fx\:cross\:center.fx\:cross\:center .fx\:dir\:row {
    align-items: center;
 }
 .vue-app .fx\:cross\:stretch.fx\:cross\:stretch {
@@ -8002,11 +8023,11 @@ html.vue-app.mobile--disabled body.-has-overlay {
    cursor: not-allowed;
 }
 @media (min-width: 1400px){
-   .vue-app .cursor\:pointer.cursor\:pointer:not(.inputGroup-slotWrap .button):not(.drawer-close-btn .button) {
+   .vue-app .cursor\:pointer.cursor\:pointer:not(.inputGroup-slotWrap .button):not(.drawer-close-btn .button):not(.dialog-header .button):not(.dashboardTab-btn-remove):not(.dashboardTab-btn-drag) {
       min-width: 130px;
    }
 }
-.vue-app .cursor\:pointer.cursor\:pointer:not(:only-child) {
+.vue-app .cursor\:pointer.cursor\:pointer:not(:only-child):not(button.\-size-big) {
    flex-grow: 0.47;
 }
 .vue-app .pEvents\:none.pEvents\:none {
@@ -9515,4 +9536,7 @@ span.CodeMirror-selectedtext {
    font-weight: 500;
    src: url(/assets/fonts/montserrat-latin-500-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-500-normal.woff) format("woff");
    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
+}
+#customize-menu-editor .details-tab>header .fx\:dir\:row.fx\:dir\:row{
+   flex-grow: 0.77;
 }
