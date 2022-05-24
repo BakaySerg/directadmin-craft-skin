@@ -1344,8 +1344,8 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
    }
 }
 .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-icon {
-   width: 4.6em;
-   height: 4.6em;
+   width: 4.8em;
+   height: 4.8em;
    margin-bottom: .2rem
 }
 @media (max-width: 700px){
@@ -7971,7 +7971,7 @@ html.vue-app.mobile--disabled body.-has-overlay {
 .vue-app .trans\:fast.trans\:fast {
    transition-duration: .15s
 }
-.vue-app .radius\:def.radius\:def {
+.vue-app .radius\:def.radius\:def:not(.dialog-content .radius\:def) {
    border-radius: 3px;
    user-select: none;
 }
@@ -8028,11 +8028,11 @@ html.vue-app.mobile--disabled body.-has-overlay {
    cursor: not-allowed;
 }
 @media (min-width: 1400px){
-   .vue-app .cursor\:pointer.cursor\:pointer:not(.inputGroup-slotWrap .button):not(.drawer-close-btn .button):not(.dialog-header .button):not(.dashboardTab-btn-remove):not(.dashboardTab-btn-drag) {
+   .vue-app .cursor\:pointer.cursor\:pointer:not(.inputGroup-slotWrap .button):not(.drawer-close-btn .button):not(.dialog-header .button):not(.dashboardTab-btn-remove):not(.dashboardTab-btn-drag):not(.r-table-pagination button) {
       min-width: 130px;
    }
 }
-.vue-app .cursor\:pointer.cursor\:pointer:not(:only-child):not(button.\-size-big) {
+.vue-app .cursor\:pointer.cursor\:pointer:not(:only-child):not(button.\-size-big):not(button.\-theme-safe) {
    flex-grow: 0.47;
 }
 .vue-app .pEvents\:none.pEvents\:none {
