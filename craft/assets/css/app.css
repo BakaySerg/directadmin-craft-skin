@@ -731,7 +731,8 @@ html.vue-app.dir\:rtl .mainMenuEntry {
    padding: 2rem
 }
 .userbar {
-   position: relative
+   position: relative;
+   order: 9;
 }
 .userbar>.userbar-button {
    display: flex;
@@ -827,6 +828,12 @@ html.vue-app.dir\:rtl .userbar>.userbar-button {
 .access-level-toggle-switch {
    padding-left: 3rem
 }
+@media (min-width: 1200px){
+   .access-level-toggle-switch {
+      padding-top: 1.2rem;
+      order: 3;
+   }
+}
 @media (max-width: 1023px){
    .access-level-toggle-switch {
       padding-left: .8em;
@@ -853,7 +860,8 @@ html.vue-app.dir\:rtl .search .autocomplete input[type=text] {
 .vue-app .search .options-icon,
 .vue-app .search .search-icon {
    position: absolute;
-   top: 2.7rem;
+   top: 50%;
+   transform: translateY(-50%);
    z-index: 5
 }
 .vue-app .search .search-icon {
@@ -943,14 +951,12 @@ html.vue-app:not(.mobile) .header {
 }
 html.vue-app:not(.mobile) .header .mainMenu,
 html.vue-app:not(.mobile) .header .search {
-   max-width: 128rem;
+   max-width: 126rem;
    margin-left: auto;
    margin-right: auto
 }
 html.vue-app:not(.mobile) .header .search {
-   padding: 2rem;
-   padding-bottom: 0;
-   background: #fff;
+   padding: 1.7rem .9rem;
    border-top-left-radius: 4px;
    border-top-right-radius: 4px
 }
@@ -6788,8 +6794,9 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
 }
 .ui-toggle-switch>.label {
    position: absolute;
-   top: -12px;
-   left: 10px;
+   top: -21px;
+   left: 50%;
+   transform: translateX(-50%);
    line-height: 20px;
    padding: 0 10px;
    z-index: 12;
@@ -6801,12 +6808,16 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
    display: flex;
    align-items: center;
    height: 3.5rem;
-   position: relative
+   position: relative;
+   z-index: 1;
 }
 .ui-toggle-switch .options .option {
    display: block;
    line-height: 3.5rem;
    text-align: center
+}
+.ui-toggle-switch .options .option.\--active {
+   color: #fff;
 }
 @media (min-width: 999px) and (max-width: 1100px){
    .ui-toggle-switch .options .option {
@@ -6816,9 +6827,10 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
 .ui-toggle-switch .options .slider {
    position: absolute;
    background: var(--primary);
-   height: 2px;
+   height: 38px;
    bottom: 0;
-   transition: transform .3s ease
+   z-index: -1;
+   transition: transform .3s ease;
 }
 .vue-app .ui-toggle {
    font-weight: 500;
@@ -7791,6 +7803,7 @@ html.vue-app.mobile--disabled body.-has-overlay {
    padding-left: 1.4rem;
    padding-right: 1.4rem;
    gap: 1.7rem;
+   margin: 0 !important;
 }
 .fx\:equalWidth\:true button.button {
    margin: 0 !important;
@@ -7848,7 +7861,7 @@ html.vue-app.mobile--disabled body.-has-overlay {
    }
 }
 .app-header .fxi\:grow\:true.fxi\:grow\:true {
-   flex-grow: .695
+   flex-grow: .639
 }
 @media (max-width: 1440px){
    .app-header .fxi\:grow\:true.fxi\:grow\:true {

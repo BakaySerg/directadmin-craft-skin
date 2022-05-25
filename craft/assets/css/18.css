@@ -185,7 +185,9 @@ html.vue-app.dir\:rtl .input-ip .input-ip-mask {
 }
 .reseller-stats-widget>div {
     padding: 1.5rem;
-    border: 1px solid #e0e0e0
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,.6);
 }
 .reseller-stats-widget>div>:not(:last-child) {
     margin-bottom: 1rem
@@ -202,7 +204,7 @@ html.vue-app.dir\:rtl .input-ip .input-ip-mask {
     line-height: 1.1;
     font-size: 14px;
     font-weight: 600;
-    padding: 0 1rem
+    padding-right: .6rem;
 }
 .reseller-stats-widget>div.info .info-entry .info-entry-content {
     flex: 1;
