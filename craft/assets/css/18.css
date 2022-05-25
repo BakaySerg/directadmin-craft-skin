@@ -137,6 +137,7 @@ html.vue-app.dir\:rtl .dashboardTab.dashboardTab.-is-active {
 .admin-stats-widget>div {
     padding: 1.5rem;
     border: 1px solid #e0e0e0;
+    background-color: rgba(255,255,255,.6);
     border-radius: 3px;
 }
 .admin-stats-widget>div>:not(:last-child) {
@@ -304,6 +305,12 @@ html.vue-app .dashboard .dashboard-right {
     border-top-left-radius: 0;
     grid-column: auto;
     -ms-grid-column: 2
+}
+@media (min-width: 1024px){
+    .dashboard-left + .dashboard-right {
+        padding-top: 0 !important;
+        padding-right: 0 !important;
+    }
 }
 html.vue-app.dir\:rtl .dashboard .dashboard-right {
     text-align: right;
