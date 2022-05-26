@@ -1,5 +1,5 @@
 ::-webkit-scrollbar{width: 7px; height: 7px}
-::-webkit-scrollbar-thumb {background: var(--primary); cursor: pointer; border-radius: 4px}
+::-webkit-scrollbar-thumb {background: var(--neutral-a-80); cursor: pointer; border-radius: 4px}
 ::-webkit-scrollbar-track-piece{background: #f6f6f5;cursor: pointer}
 ::-webkit-scrollbar-corner{background: transparent;border: none}
 
@@ -2028,7 +2028,7 @@ html.vue-app.dir\:rtl .app-sidebar .app-sidebar-footer .app-sidebar-language {
 		padding: 1em calc(4em + 5.2vw);
 	}
 }
-@media (max-width: 1290px){
+@media (max-width: 1700px){
 	.vue-app body.\--grid-layout.\--dashboard .app-content main {
 		padding: 0 15px;
 	}
@@ -4154,7 +4154,7 @@ html.vue-app.dir\:rtl .input-checkbox.\--inverted .input-checkbox-label {
 }
 .vue-app .input-radio {
    cursor: pointer;
-   padding: 0 18px
+   padding: 0 18px 0 0
 }
 .vue-app .input-radio,
 .vue-app .input-radio .input-radio-control {
@@ -4162,20 +4162,22 @@ html.vue-app.dir\:rtl .input-checkbox.\--inverted .input-checkbox-label {
    align-items: center
 }
 .vue-app .input-radio .input-radio-control {
-   width: 1.5rem;
-   height: 1.5rem;
+   width: 1.8rem;
+   height: 1.8rem;
    border: 1px solid #848da0;
    justify-content: center;
    border-radius: 50%
 }
 .vue-app .input-radio .input-radio-control .inner {
-   width: calc(100% - 4px);
-   height: calc(100% - 4px);
+   width: calc(100% - 6px);
+   height: calc(100% - 6px);
    background: var(--safe);
    border-radius: 50%
 }
 html.vue-app.dir\:ltr .input-radio .input-radio-label {
-   margin-left: 1rem
+   margin-left: 1rem;
+   user-select: none;
+   cursor: pointer;
 }
 html.vue-app.dir\:rtl .input-radio .input-radio-label {
    margin-right: 1rem;
@@ -4689,7 +4691,8 @@ html.vue-app.dir\:rtl .Select__Dropdown__Items__Item {
    display: inline-block;
    position: relative;
    height: auto;
-   min-width: 0;
+   min-width: 32px;
+   min-height: 32px;
    margin: 0;
    padding: 0;
    background: none;
@@ -5762,20 +5765,21 @@ html.vue-app.dir\:rtl .ui-mobile-pagination {
    background-color: #fff;
    border-radius: 4px;
    height: 3.5rem;
-   overflow: hidden
+   overflow: hidden;
+   margin-left: 0 !important;
 }
 .ui-number-label .number[data-v-0b753127] {
    color: #fff;
-   font-size: 18px;
+   font-size: 14px;
    font-weight: 700;
    text-align: center;
-   padding: 0 1.5rem;
+   padding: 0 1.3rem;
    display: block;
    height: 3.5rem;
    line-height: 3.5rem
 }
 .ui-number-label .label[data-v-0b753127] {
-   padding: 0 1.5rem;
+   padding: 0 1.3rem;
    font-weight: 700;
    font-size: 14px;
    background-color: #fff
@@ -6104,10 +6108,15 @@ html.vue-app.dir\:rtl .ui-mobile-pagination {
    justify-content: space-between;
    align-items: center;
    margin: 1rem 0 2rem;
+   gap: 0.4em;
    margin-top: 0
 }
 .vue-app .r-table .r-table-buttons-before-slot {
    padding: 1rem 0
+}
+.vue-app .r-table .r-table-buttons-before-slot:empty,.fxi\:grow\:true:empty {
+   padding: 0;
+   display: none;
 }
 @media (max-width:767px) {
    .vue-app .r-table .r-table-buttons-before-slot {
@@ -7410,6 +7419,12 @@ body.dev:before {
    border-left: 0;
    border-right: 0
 }
+.email-pop-widget .ui-number-label +.ui-number-label{
+   margin-top: 1rem !important;
+}
+/* .ui-table td:first-child, .ui-table th:first-child {
+   padding-left: 0;
+} */
 @media (max-width: 700px){
    .vue-app td:first-child,
    .vue-app th:first-child {
@@ -7864,21 +7879,21 @@ html.vue-app.mobile--disabled body.-has-overlay {
    }
 }
 .app-header .fxi\:grow\:true.fxi\:grow\:true {
-   flex-grow: .639
+   flex-grow: .636
 }
 @media (max-width: 1440px){
    .app-header .fxi\:grow\:true.fxi\:grow\:true {
-      flex-grow: .83
+      flex-grow: .685
    }
 }
 @media (max-width: 1366px){
    .app-header .fxi\:grow\:true.fxi\:grow\:true {
-      flex-grow: .8
+      flex-grow: .636
    }
 }
 @media (max-width: 1280px){
    .app-header .fxi\:grow\:true.fxi\:grow\:true {
-      flex-grow: .73
+      flex-grow: .58
    }
 }
 @media (max-width: 1200px){
@@ -7957,8 +7972,11 @@ html.vue-app.mobile--disabled body.-has-overlay {
    position: absolute !important
 }
 .vue-app .dashboardTab.dashboardTab.mobile .pos\:abs.pos\:abs {
-   top: 1.4rem;
-   right: 0.7rem;
+   top: -.6rem;
+   right: 0;
+}
+.vue-app .dashboardTab.dashboardTab.mobile [class*="dashboardTab-btn-"] {
+   color: #fff;
 }
 .vue-app .pos\:fix.pos\:fix {
    position: fixed !important
@@ -8047,7 +8065,7 @@ html.vue-app.mobile--disabled body.-has-overlay {
    cursor: not-allowed;
 }
 @media (min-width: 1400px){
-   .vue-app .cursor\:pointer.cursor\:pointer:not(.inputGroup-slotWrap .button):not(.drawer-close-btn .button):not(.dialog-header .button):not(.dashboardTab-btn-remove):not(.dashboardTab-btn-drag):not(.r-table-pagination button) {
+   .vue-app .cursor\:pointer.cursor\:pointer:not(.inputGroup-slotWrap .button):not(.drawer-close-btn .button):not(.dialog-header .button):not(.dashboardTab-btn-remove):not(.dashboardTab-btn-drag):not(.r-table-pagination button):not([title="Customize"]) {
       min-width: 130px;
    }
 }
@@ -9563,4 +9581,16 @@ span.CodeMirror-selectedtext {
 }
 #customize-menu-editor .details-tab>header .fx\:dir\:row.fx\:dir\:row{
    flex-grow: 0.77;
+}
+@media (min-width: 1200px){
+   .app-header .access-level-toggle-switch + .domainsDropdown {
+      margin-left: 2.6rem !important;
+      flex-grow: 0.1;
+   }
+}
+.formElement.-is-horizontal.-is-underlined .fx\:cross\:center.fx\:cross\:center .fx\:dir\:row {
+   margin-left: 0 !important;
+}
+.ui-tabs .formElement-content.fx\:equalWidth\:true.fx\:equalWidth\:true> div {
+   gap: 1.7em;
 }
