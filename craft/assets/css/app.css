@@ -893,10 +893,6 @@ html.vue-app.dir\:rtl .search .options-icon {
 .vue-app .search.focused .autocomplete input[type=text] {
    border-color: var(--primary-border)
 }
-.vue-app body.\--sidebar-layout .search .options-icon,
-.vue-app body.\--sidebar-layout .search .search-icon {
-   top: .7rem
-}
 .vue-app body.\--sidebar-layout .search .search-icon {
    left: 1.5rem
 }
@@ -1867,7 +1863,8 @@ html.vue-app.dir\:rtl .app-sidebar .app-sidebar-footer .app-sidebar-language {
    font-size: 12.5px
 }
 .vue-app body.\--sidebar-layout .app-header {
-   margin: 0 2rem;
+   margin: 0 0 3rem;
+   padding: 0 2rem;
    display: flex;
    align-items: center;
    height: 8rem;
@@ -1876,6 +1873,7 @@ html.vue-app.dir\:rtl .app-sidebar .app-sidebar-footer .app-sidebar-language {
    top: 0;
    background: #fff;
    border-bottom: 1px solid #e0e0e0;
+   box-shadow: -1px 1px 10px rgba(30,23,104,.04);
    z-index: 5
 }
 .vue-app body.\--sidebar-layout {
@@ -2038,7 +2036,8 @@ html.vue-app.dir\:rtl .app-sidebar .app-sidebar-footer .app-sidebar-language {
 }
 .vue-app body.\--grid-layout .app-content main {
    padding: 0;
-   max-width: unset
+   max-width: unset;
+   padding: 0 2rem;
 }
 @media (min-width: 1601px){
 	.vue-app body.\--grid-layout .app-content main {
@@ -3766,7 +3765,6 @@ body.\--sidebar-layout .master-login-bar {
    max-width: 128rem;
    margin-left: auto;
    margin-right: auto;
-   padding: 0 2rem;
 }
 @media (max-width:767px) {
    .app-content>main {
@@ -9593,4 +9591,10 @@ span.CodeMirror-selectedtext {
 }
 .ui-tabs .formElement-content.fx\:equalWidth\:true.fx\:equalWidth\:true> div {
    gap: 1.7em;
+}
+.vue-app footer .type\:small.type\:small {
+   display: none;
+}
+.formElement .fx\:dir\:row {
+   gap: 1rem;
 }
