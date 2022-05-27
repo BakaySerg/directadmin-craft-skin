@@ -2930,7 +2930,9 @@ html.vue-app.dir\:rtl .app-sidebar .app-sidebar-footer .app-sidebar-language {
    display: flex;
    align-items: center;
    white-space: normal;
-   border-bottom: .7px solid #dce2ea
+   border-bottom: .7px solid #dce2ea;
+   user-select: none;
+   cursor: pointer;
 }
 .vue-app body.-refreshed-layout .list-sidebar .list .list-item .list-item-header.\--active {
    background-color: var(--primary-a-90);
@@ -9615,12 +9617,14 @@ span.CodeMirror-selectedtext {
 .vue-app footer .type\:small.type\:small {
    display: none;
 }
-.formElement .fx\:dir\:row {
+.formElement .fx\:dir\:row:not(.inputGroup-wrap) {
    gap: 1rem;
 }
 .table-elem {
    line-height: 1.2;
 }
-.\--grid-layout .aside .dashboardTab.dashboardTab.mobile[level="user"] [cpus]:not(:first-child),.\--grid-layout .aside .dashboardTab.dashboardTab.mobile[level="user"] [memory]:not(:first-child){
+.\--grid-layout .aside .dashboardTab.dashboardTab.mobile[level="user"] [cpus]:not(:first-child),
+.\--grid-layout .aside .dashboardTab.dashboardTab.mobile[level="user"] [memory]:not(:first-child),
+.\--grid-layout .aside .dashboardTab.dashboardTab.mobile[level="reseller"] .stats{
    display: none;
 }
