@@ -82,6 +82,7 @@ html.vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader {
     padding-bottom: 0.2em;
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 @media (min-width: 1024px){
     html.vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader {
