@@ -665,9 +665,12 @@ html.vue-app.dir\:rtl .mainMenuEntry {
 .icon~* {
    vertical-align: middle
 }
-.icon > svg {
+.icon > svg:not(.Select__Button__Caret > svg) {
    min-width: 14px;
    min-height: 14px;
+}
+.Select__Button__Caret {
+   opacity: 0.7;
 }
 .vue-app .mainMenuCat .mainMenuEntry {
    width: 103%
@@ -745,6 +748,12 @@ html.vue-app.dir\:rtl .mainMenuEntry {
    margin-left: 2rem;
    cursor: pointer
 }
+@media (max-width: 991px){
+   .userbar>.userbar-button {
+      margin-left: 0;
+      padding-right: 1em;
+   }
+}
 html.vue-app.dir\:rtl .userbar>.userbar-button {
    margin-right: 2rem;
    margin-left: unset
@@ -764,11 +773,19 @@ html.vue-app.dir\:rtl .userbar>.userbar-button {
    transition: transform .3s ease
 }
 @media (max-width: 1100px){
+   .userbar>.userbar-button .userbar-button-text {
+      font-size: 1.2rem;
+   }
    .userbar>.userbar-button .userbar-button-caret {
       max-width: 8px;
    }
    .userbar>.userbar-button .userbar-button-caret > * {
       max-width: 100%;
+   }
+}
+@media (max-width: 991px){
+   .userbar>.userbar-button .userbar-button-caret {
+      display: none;
    }
 }
 .userbar.\--open>.userbar-button .userbar-button-caret {
@@ -787,9 +804,13 @@ html.vue-app.dir\:rtl .userbar>.userbar-button {
    border-bottom-left-radius: 4px;
    border-bottom-right-radius: 4px
 }
+@media (max-width: 991px){
+   .userbar>.userbar-dropdown {
+      right: 4px;
+   }
+}
 @media (max-width:767px) {
    .userbar>.userbar-dropdown {
-      right: -5.6rem;
       padding-top: 0.6em;
    }
 }
@@ -832,10 +853,20 @@ html.vue-app.dir\:rtl .userbar>.userbar-button {
 .access-level-toggle-switch {
    padding-left: 3rem
 }
-@media (min-width: 1200px){
+@media (max-width: 1370px){
+   .access-level-toggle-switch {
+      padding-left: 1.5rem;
+   }
+}
+@media (min-width: 1024px){
    .access-level-toggle-switch {
       padding-top: 1.2rem;
       order: 3;
+   }
+}
+@media (max-width: 1100px){
+   .access-level-toggle-switch {
+      padding-top: 0.6rem;
    }
 }
 @media (max-width: 1023px){
@@ -844,12 +875,22 @@ html.vue-app.dir\:rtl .userbar>.userbar-button {
       padding-right: .8em;
    }
 }
+@media (max-width: 991px){
+   .access-level-toggle-switch {
+      padding-top: 0;
+   }
+}
 .vue-app .search {
    width: 100%;
    position: relative
 }
 .vue-app .search .autocomplete input[type=text] {
    padding-left: 4.4rem
+}
+@media (max-width: 1100px){
+   .vue-app .search .autocomplete input[type=text] {
+      padding-left: 3.5rem;
+   }
 }
 html.vue-app.dir\:rtl .search .autocomplete input[type=text] {
    padding-left: 1.5rem;
@@ -928,12 +969,8 @@ html.vue-app.mobile .search.focused .autocomplete input[type=text] {
    border-left-width: 1px;
    border-right-width: 1px
 }
-html.vue-app.mobile .search .options-icon,
 html.vue-app.mobile .search .search-icon {
-   top: .7rem
-}
-html.vue-app.mobile .search .search-icon {
-   left: 1.5rem
+   left: 1.2rem
 }
 html.vue-app.mobile.dir\:rtl .search .search-icon {
    right: 1.5rem;
@@ -1254,6 +1291,11 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
 	color: #fff;
 	border-radius: 3px;
 	padding: .8em 1em;
+}
+@media (max-width: 1100px){
+   .icons-grid .icons-grid-category-title {
+      padding: 0.6em 0.8em;
+   }
 }
 @media (min-width: 1400px){
    .icons-grid .icons-grid-category-title {
@@ -1946,6 +1988,11 @@ html.vue-app.dir\:rtl .app-sidebar .app-sidebar-footer .app-sidebar-language {
    top: 50%;
 	transform: translateY(-50%);
    left: 1.8rem
+}
+@media (max-width: 1100px){
+   .vue-app body.\--grid-layout .app-header .search .search-icon {
+      left: 1.3rem;
+   }
 }
 .vue-app body.\--grid-layout .app-header .nav-grid-trigger {
    width: 4rem;
@@ -4499,6 +4546,11 @@ html.vue-app.dir\:rtl .input-radio.\--inverted .input-radio-label {
    border: 1px solid #e0e0e0;
    box-shadow: unset
 }
+@media (max-width: 1100px){
+   .Select .Select__Button {
+      height: 4.4rem;
+   }
+}
 .Select .Select__Button__Label {
    flex-grow: 1;
    padding-right: 1rem;
@@ -4784,6 +4836,12 @@ html.vue-app.dir\:rtl .Select__Dropdown__Items__Item {
 .button.-size-normal {
    height: 5rem;
    padding: 0 1.4rem
+}
+@media (max-width: 1100px){
+   .button.-size-big, .button.-size-normal {
+      height: 4.4rem;
+      padding: 0 1rem
+   }
 }
 .button.-size-normal:after {
    box-shadow: none
@@ -6664,6 +6722,11 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header-tab-content {
    align-items: center;
    justify-content: center;
 }
+@media (max-width: 767px){
+   .ui-tabs .ui-tabs-header-tab-label {
+      justify-content: flex-start;
+   }
+}
 .ui-tabs .ui-tabs-header-tab-label>.icon {
    transform: rotate(-90deg);
    margin: 0 .5rem;
@@ -6818,7 +6881,7 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
    font-family: Open Sans, Tahoma, sans-serif;
    font-size: 1.2rem;
    font-weight: 400;
-   cursor: pointer
+   cursor: pointer;
 }
 .ui-toggle-switch>.label {
    position: absolute;
@@ -6829,7 +6892,8 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
    padding: 0 10px;
    z-index: 12;
    font-weight: 600;
-   background: #fff
+   background: #fff;
+   white-space: nowrap;
 }
 .ui-toggle-switch .options {
    overflow: hidden;
@@ -6838,6 +6902,15 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
    height: 3.5rem;
    position: relative;
    z-index: 1;
+   border-radius: 3px;
+}
+@media (max-width: 991px){
+   .ui-toggle-switch>.label {
+      display: none;
+   }
+   .ui-toggle-switch .options {
+      height: 3.3rem;
+   }
 }
 .ui-toggle-switch .options .option {
    display: block;
@@ -6849,7 +6922,7 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
 }
 @media (min-width: 999px) and (max-width: 1100px){
    .ui-toggle-switch .options .option {
-      max-width: 88px;
+      max-width: 94px;
    }
 }
 .ui-toggle-switch .options .slider {
@@ -6860,6 +6933,11 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
    bottom: 0;
    z-index: -1;
    transition: transform .3s ease;
+}
+@media (max-width: 991px){
+   .ui-toggle-switch .options .slider {
+      height: 3.3rem;
+   }
 }
 .ui-toggle-switch .option.\--reseller ~ .slider {
    background-color: var(--primary-dark-light);
@@ -7558,6 +7636,12 @@ html.vue-app.dir\:rtl th {
 .vue-app select:not([multiple]) {
    height: 5rem
 }
+@media (max-width: 1100px){
+   .vue-app input:not([type=radio]):not([type=checkbox]):not([type=range]),
+   .vue-app select:not([multiple]) {
+      height: 4.4rem
+   }
+}
 .vue-app input[type=checkbox],
 .vue-app input[type=radio] {
    width: 1.5rem;
@@ -7899,21 +7983,31 @@ html.vue-app.mobile--disabled body.-has-overlay {
    }
 }
 .app-header .fxi\:grow\:true.fxi\:grow\:true {
-   flex-grow: .636
+   flex-grow: .636;
+   max-width: 1298px;
+}
+@media (max-width: 1680px){
+   .app-header .fxi\:grow\:true.fxi\:grow\:true {
+      flex-grow: .676;
+      max-width: 1178px;
+   }
 }
 @media (max-width: 1440px){
    .app-header .fxi\:grow\:true.fxi\:grow\:true {
-      flex-grow: .685
+      flex-grow: .685;
+      max-width: 1020px;
    }
 }
 @media (max-width: 1366px){
    .app-header .fxi\:grow\:true.fxi\:grow\:true {
-      flex-grow: .636
+      flex-grow: .636;
+      max-width: 945px;
    }
 }
 @media (max-width: 1280px){
    .app-header .fxi\:grow\:true.fxi\:grow\:true {
-      flex-grow: .58
+      flex-grow: .6;
+      max-width: 870px;
    }
 }
 @media (max-width: 1200px){
@@ -9627,4 +9721,19 @@ span.CodeMirror-selectedtext {
 .\--grid-layout .aside .dashboardTab.dashboardTab.mobile[level="user"] [memory]:not(:first-child),
 .\--grid-layout .aside .dashboardTab.dashboardTab.mobile[level="reseller"] .stats{
    display: none;
+}
+@media (max-width: 991px){
+   .header-top > .fx\:dir\:row.fx\:dir\:row {
+      flex-grow: initial;
+   }
+}
+@media (max-width: 500px){
+   .header-logo {
+      display: inline-block;
+      max-width: 120px;
+      margin-right: auto;
+   }
+   .header-logo img {
+      max-width: 120px !important;
+   }
 }

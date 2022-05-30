@@ -425,6 +425,11 @@ html.vue-app body.\--sidebar-layout .dashboard .dashboardTab:first-child {
         padding-top: 1.5rem;
     }
 }
+@media (min-width: 1024px) and (max-width: 1200px){
+    .icons-dashboard .aside {
+        max-width: 330px;
+    }
+}
 .icons-dashboard .aside .grip {
     border-right: 5px double #e0e0e0;
     top: 1.5rem;
