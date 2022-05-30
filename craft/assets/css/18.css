@@ -3,6 +3,9 @@ html.vue-app {
     --bg-main: #F7F7F7;
     --bg-dark2: #505A74;
 }
+.app.\--theme-darkmode {
+    --bg-main: #202F55;
+}
 html.vue-app .dashboardTab.dashboardTab {
     border-radius: 0;
     transition-property: color,background,opacity,border,filter,transform;
@@ -134,6 +137,9 @@ html.vue-app.dir\:rtl .dashboardTab.dashboardTab.-is-active {
     border: 1px solid #e0e0e0;
     background-color: rgba(255,255,255,.6);
     border-radius: 3px;
+}
+.app.\--theme-darkmode .admin-stats-widget>div {
+    background-color: transparent;
 }
 .admin-stats-widget>div>:not(:last-child) {
     margin-bottom: 1rem
@@ -353,6 +359,9 @@ html.vue-app .dashboard.mobile .dashboard-mobile {
     padding-bottom: 2rem;
     overflow: hidden;
     border-radius: 3px;
+}
+.app.\--theme-darkmode .dashboard.mobile .dashboard-mobile {
+    background-color: var(--bg);
 }
 html.vue-app .dashboard.mobile .dashboard-mobile .access-level-switch {
     display: flex;

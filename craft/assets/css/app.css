@@ -3,6 +3,14 @@
 ::-webkit-scrollbar-track-piece{background: #f6f6f5;cursor: pointer}
 ::-webkit-scrollbar-corner{background: transparent;border: none}
 
+.app.\--theme-darkmode {
+   --bg: #2A3B67;
+   --bg-main: #202F55;
+   --bg-title: #172446;
+   --bg-dark2: #505A74;
+   --color-active: #448ED9;
+}
+
 .vue-recycle-scroller {
    position: relative
 }
@@ -629,6 +637,10 @@ td.disabled[data-v-155e681b] {
    margin-left: auto;
    margin-right: auto;
 }
+.app.\--theme-darkmode .route-container, .app.\--theme-darkmode .route-container .route-loading-container {
+   background-color: var(--bg-main);
+}
+
 .route-container .route-loading-container {
    position: relative;
    align-items: center
@@ -938,6 +950,12 @@ html.vue-app.dir\:rtl .search .options-icon {
 .vue-app .search.focused .autocomplete input[type=text] {
    border-color: var(--primary-border)
 }
+
+.app.\--theme-darkmode .search.focused .autocomplete .inputGroup-left .button,
+.app.\--theme-darkmode .search.focused .autocomplete .inputGroup-right .button,
+.app.\--theme-darkmode .search.focused .autocomplete input[type=text] {
+   border-color: transparent;
+}
 .vue-app body.\--sidebar-layout .search .search-icon {
    left: 1.5rem
 }
@@ -1235,6 +1253,11 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
       padding: .5rem 0 6rem .4rem;
    }
 }
+@media (max-width: 1023px){
+   .icons-grid {
+      padding-bottom: 0;
+   }
+}
 .icons-grid .filters-bar {
    padding: 1rem;
 	margin-bottom: 1.6rem;
@@ -1291,6 +1314,9 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
 	color: #fff;
 	border-radius: 3px;
 	padding: .8em 1em;
+}
+.app.\--theme-darkmode .icons-grid .icons-grid-category-title {
+   background-color: var(--bg-title);
 }
 @media (max-width: 1100px){
    .icons-grid .icons-grid-category-title {
@@ -1359,6 +1385,9 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
    transition: .3s ease;
    position: relative
 }
+.app.\--theme-darkmode .icons-grid .icons-grid-category-entries .icons-grid-category-entry{
+   background-color: var(--bg);
+}
 .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-name {
    text-align: center;
    color: #34383c;
@@ -1379,6 +1408,9 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
 	max-width: 66px;
 	transform: translateX(-50%);
 	border: 1px solid #e0e0e0;
+}
+.app.\--theme-darkmode .icons-grid-category-entry-name:before {
+   opacity: 0.2;
 }
 @media (max-width: 700px){
    .icons-grid .icons-grid-category-entries .icons-grid-category-entry {
@@ -1407,6 +1439,12 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
    right: 0;
    top: 0;
    transform: translate(50%, -50%)
+}
+@media (max-width: 767px){
+   .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-updates {
+      right: 7px;
+      top: 2px;
+   }
 }
 .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-level {
    position: absolute;
@@ -1582,7 +1620,7 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
    right: 2rem
 }
 #mobile-menu .icons-grid-wrapper .icons-grid-content {
-   padding: 0 1rem;
+   padding: 0 1rem 3rem;
    background-color: #f7f7f7;
 }
 #mobile-menu .icons-grid-wrapper .icons-grid-content .icons-grid-category-entries {
@@ -3897,6 +3935,9 @@ html.vue-app.dir\:rtl .app-page-header .app-page-header-navigation .app-page-hea
 	font-size: 1.4rem;
    color: var(--primary-dark-light)
 }
+.app.\--theme-darkmode .app-page-header .app-page-header-navigation .app-page-header-links>a {
+   color: var(--color-active);
+}
 .vue-app .app-page-header .app-page-header-navigation .app-page-header-links>a:hover {
    opacity: 1
 }
@@ -4779,6 +4820,11 @@ html.vue-app.dir\:rtl .Select__Dropdown__Items__Item {
    user-select: none;
    transition-property: color, background, opacity, border, filter
 }
+@media (max-width: 360px){
+   .button {
+      font-size: 1.2rem;
+   }
+}
 .button:after {
    content: "";
    display: block;
@@ -4878,7 +4924,7 @@ html.vue-app.dir\:rtl .button-inner {
 html.vue-app.mobile .button,
 html.vue-app.mobile .button.-size-big,
 html.vue-app.mobile .button.-size-small {
-   height: 3.5rem
+   height: 4rem
 }
 .codeArea {
    overflow-x: auto
@@ -6765,6 +6811,9 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header-tab-content {
    padding: 1rem 1.8rem;
 	background-color: #fff;
 }
+.app.\--theme-darkmode .ui-tabs .ui-tabs-content {
+   background-color: var(--bg);
+}
 .ui-tabs .ui-tabs-buttons {
    display: flex;
    justify-content: flex-end;
@@ -6933,6 +6982,9 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
    bottom: 0;
    z-index: -1;
    transition: transform .3s ease;
+}
+.app.\--theme-darkmode .ui-toggle-switch .options .slider {
+   background-color: var(--color-active);
 }
 @media (max-width: 991px){
    .ui-toggle-switch .options .slider {
@@ -7929,6 +7981,12 @@ html.vue-app.mobile--disabled body.-has-overlay {
 }
 .fx\:equalWidth\:true button.button {
    margin: 0 !important;
+}
+@media (max-width: 767px){
+   .dashboard-mobile > .fx\:equalWidth\:true {
+      padding-left: 1.9rem;
+      padding-right: 1.9rem;
+   }
 }
 .vue-app .fx\:wrap\:true.fx\:wrap\:true {
    flex-wrap: wrap
