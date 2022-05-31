@@ -5,6 +5,7 @@ html.vue-app {
 }
 .app.\--theme-darkmode {
     --bg-main: #202F55;
+    --bg-title: #172446;
 }
 html.vue-app .dashboardTab.dashboardTab {
     border-radius: 0;
@@ -86,6 +87,9 @@ html.vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader {
     position: relative;
     z-index: 1;
     cursor: pointer;
+}
+.app.\--theme-darkmode .dashboardTab.dashboardTab.mobile>.dashboardTabHeader {
+    background-color: var(--bg-title);
 }
 @media (min-width: 1024px){
     html.vue-app .dashboardTab.dashboardTab.mobile>.dashboardTabHeader {
@@ -252,6 +256,9 @@ html.vue-app.dir\:rtl .input-ip .input-ip-mask {
 .user-stats-widget>div {
     padding: 1.5rem;
     border: 1px solid #e0e0e0
+}
+.app.\--theme-darkmode .user-stats-widget>div {
+    border-color: rgba(132,141,160,.43);
 }
 .user-stats-widget> .info {
     padding: 1.5rem 1.2rem;

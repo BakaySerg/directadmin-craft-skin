@@ -25,7 +25,7 @@ html.vue-app.vue-app .Select .Select__Button .Select__Button__Label {
 }
 
 html.vue-app.vue-app .Select .Select__Button .Select__Button__Caret svg {
-   color: var(--primary-dark)
+   color: var(--bg-dark2)
 }
 
 html.vue-app.vue-app .Select.-is-open .Select__Button {
@@ -75,7 +75,6 @@ html.vue-app.vue-app button.-theme-light {
 }
 
 html.vue-app.vue-app table th {
-   background-color: var(--bg);
    border-color: hsla(0, 0%, 100%, .2)
 }
 
@@ -185,7 +184,7 @@ html.vue-app.vue-app .dialog .dialog-buttons {
 
 html.vue-app.vue-app .button.-theme-light {
    color: hsla(0, 0%, 100%, .87);
-   background: var(--bg-title);
+   background-color: var(--bg-main);
    border-color: hsla(0, 0%, 100%, .2)
 }
 
@@ -347,7 +346,7 @@ html.vue-app.mobile .app.--theme-darkmode .app-content>.header>.header-top .user
 }
 
 html.vue-app.mobile .app.--theme-darkmode .dashboard-mobile .dashboardTab.mobile {
-   background: var(--bg-title) !important;
+   background: var(--bg) !important;
    color: hsla(0, 0%, 100%, .87);
    border-color: hsla(0, 0%, 100%, .2)
 }
@@ -384,7 +383,7 @@ html.vue-app.vue-app .c\:bg\:gray2 {
 
 html.vue-app.vue-app .c\:txt\:content,
 html.vue-app.vue-app .c\:txt\:neutral {
-   color: hsla(0, 0%, 100%, .87)
+   color: hsla(0, 0%, 100%, .58)
 }
 
 html.vue-app.vue-app .scrollbar\:primary::-webkit-scrollbar-thumb {
@@ -457,7 +456,7 @@ html.vue-app.vue-app .app.--theme-darkmode #SEARCH_SETTINGS .c\:bg\:gray2 .input
 }
 
 html.vue-app.vue-app .app.--theme-darkmode .drawer {
-   background-color: var(--bg-title);
+   background-color: var(--bg-main);
    color: hsla(0, 0%, 100%, .87)
 }
 
@@ -653,7 +652,15 @@ html.vue-app body .daterangepicker .drp-buttons .btn.btn-secondary {
 html.vue-app.mobile .app.--theme-darkmode .app-content>.header .header-logo {
    background-image: url(/IMG_LOGO2);
    background-repeat: no-repeat;
-   background-position: 1rem
+   background-size: contain;
+   background-position: center;
+   margin-right: auto;
+   margin-left: 1.2rem;
+}
+@media (max-width: 1023px){
+   html.vue-app.mobile .app.--theme-darkmode .app-content>.header .header-logo {
+      max-width: 150px;
+   }
 }
 
 html.vue-app.mobile .app.--theme-darkmode .app-content>.header .header-logo img {
@@ -667,7 +674,14 @@ html.vue-app.mobile .app.--theme-darkmode #mobile-menu {
 html.vue-app.mobile .app.--theme-darkmode #mobile-menu .header-logo {
    background-image: url(/IMG_LOGO2);
    background-repeat: no-repeat;
-   background-position: 0
+   background-position: center;
+   background-size: contain;
+   margin-right: auto;
+}
+@media (max-width: 1023px){
+   html.vue-app.mobile .app.--theme-darkmode #mobile-menu .header-logo {
+      max-width: 150px;
+   }
 }
 
 html.vue-app.mobile .app.--theme-darkmode #mobile-menu .header-logo img {
@@ -799,7 +813,8 @@ html.vue-app body.--grid-layout.--grid-layout {
 
 html.vue-app body.--grid-layout.--grid-layout .app-header {
    background: var(--bg);
-   border-bottom-color: hsla(0, 0%, 100%, .38)
+   border-bottom-color: hsla(0, 0%, 100%, .38);
+   box-shadow: -1px 3px 10px rgba(30,23,104,.4);
 }
 
 html.vue-app body.--grid-layout.--grid-layout .app-header .header-logo {

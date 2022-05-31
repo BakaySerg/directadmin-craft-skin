@@ -1011,7 +1011,7 @@ html.vue-app:not(.mobile) .header .search {
    margin-right: auto
 }
 html.vue-app:not(.mobile) .header .search {
-   padding: 1.7rem .9rem;
+   padding: 1.7rem 1.1rem;
    border-top-left-radius: 4px;
    border-top-right-radius: 4px
 }
@@ -1153,7 +1153,7 @@ html.vue-app.mobile .header-top .header-logo img>* {
    height: 100%;
    width: 100%
 }
-html.vue-app.mobile .header-top .menu-trigger {
+.vue-app.mobile .header-top .menu-trigger {
    color: var(--primary-dark);
    opacity: 1;
    width: 6rem;
@@ -1162,6 +1162,9 @@ html.vue-app.mobile .header-top .menu-trigger {
    align-items: center;
    justify-content: center;
    border-radius: 0
+}
+.app.\--theme-darkmode .header-top .menu-trigger {
+   color: var(--primary);
 }
 html.vue-app.mobile .header-top .menu-trigger:focus {
    box-shadow: unset
@@ -1386,6 +1389,7 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
    position: relative
 }
 .app.\--theme-darkmode .icons-grid .icons-grid-category-entries .icons-grid-category-entry{
+   box-shadow: -1px 2px 10px rgba(30,23,50,.3);
    background-color: var(--bg);
 }
 .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-name {
@@ -1398,6 +1402,9 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
    max-width: 100%;
 	position: relative;
 	padding-top: 1.1em;
+}
+.app.\--theme-darkmode .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-name {
+   color: #fff;
 }
 .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-name:before {
 	content: "";
@@ -1421,6 +1428,11 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
       padding-top: 0.9em;
       line-height: 1.2;
       font-size: 1.2rem;
+   }
+}
+@media (max-width: 500px){
+   .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-name:before {
+      max-width: 44px;
    }
 }
 .icons-grid .icons-grid-category-entries .icons-grid-category-entry .icons-grid-category-entry-icon {
@@ -1502,9 +1514,6 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
 #mobile-menu .drawer-header .drawer-header-right-part-wrapper .drawer-close-btn {
    border-bottom-width: 0;
    height: 6rem
-}
-#mobile-menu .drawer-header .drawer-header-right-part-wrapper .drawer-close-btn .button {
-   color: var(--primary-dark)
 }
 #mobile-menu .app-sidebar-navigation {
    flex-grow: 1;
@@ -1600,11 +1609,13 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
    background: #fff;
    flex-grow: 1
 }
+.app.\--theme-darkmode #mobile-menu .icons-grid-wrapper {
+   background-color: var(--bg-main);
+}
 #mobile-menu .icons-grid-wrapper .filters-bar {
    flex-direction: column;
    align-items: stretch;
    padding: 1rem 0;
-   border-bottom: 1px solid #e0e0e0;
    margin-bottom: 2rem
 }
 #mobile-menu .icons-grid-wrapper .filters-bar .filters-bar-search {
@@ -1621,7 +1632,7 @@ html.mobile footer .lang-text[data-v-673f9eb2] {
 }
 #mobile-menu .icons-grid-wrapper .icons-grid-content {
    padding: 0 1rem 3rem;
-   background-color: #f7f7f7;
+   background-color: inherit;
 }
 #mobile-menu .icons-grid-wrapper .icons-grid-content .icons-grid-category-entries {
    margin: 0 -.5rem
@@ -3898,7 +3909,7 @@ body.\--sidebar-layout .master-login-bar {
       top: calc(100% + 1.4rem);
       border-bottom: 1px solid #e0e0e0;
    }
-   .app-page-header + * .app-page-header:after,.app-page-header + .app-page-header:after,.pageSection + .pageSection .app-page-header:after, .dashboard-mobile .system-info-widget .pageSection .app-page-header:after {
+   .app.\--theme-darkmode .app-page-header:after, .app-page-header + * .app-page-header:after,.app-page-header + .app-page-header:after,.pageSection + .pageSection .app-page-header:after, .dashboard-mobile .system-info-widget .pageSection .app-page-header:after {
       content: none;
    }
 }
@@ -5991,6 +6002,9 @@ html.vue-app.dir\:rtl .ui-mobile-pagination {
    background-color: var(--neutral-a-80);
    border-radius: 3px;
 }
+.app.\--theme-darkmode .ui-progress-label .ui-progress-label-track[data-v-69e1041e] {
+   background-color: hsl(224deg 22% 37%);
+}
 .ui-progress-label .ui-progress-label-meter[data-v-69e1041e] {
    display: block;
    height: .8rem
@@ -6932,6 +6946,11 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
    font-weight: 400;
    cursor: pointer;
 }
+@media (max-width: 1023px){
+   .ui-toggle-switch {
+      width: fit-content;
+   }
+}
 .ui-toggle-switch>.label {
    position: absolute;
    top: -21px;
@@ -6959,6 +6978,7 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
    }
    .ui-toggle-switch .options {
       height: 3.3rem;
+      width: fit-content;
    }
 }
 .ui-toggle-switch .options .option {
