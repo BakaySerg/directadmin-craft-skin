@@ -10,7 +10,10 @@
    --bg-dark2: #505A74;
    --color-active: #448ED9;
 }
-
+.dashboardTab .pos\:abs.pos\:abs {
+   right: 0;
+   top: 11px;
+}
 .vue-recycle-scroller {
    position: relative
 }
@@ -677,9 +680,13 @@ html.vue-app.dir\:rtl .mainMenuEntry {
 .icon~* {
    vertical-align: middle
 }
-.icon > svg:not(.Select__Button__Caret > svg) {
+.icon > svg:not(.Select__Button__Caret > svg):not(.navigation-category-caret>svg):not(.userbar-button-caret>svg) {
    min-width: 14px;
    min-height: 14px;
+}
+.userbar-button-caret>svg {
+   max-width: 8px;
+   max-height: 8px;
 }
 .Select__Button__Caret {
    opacity: 0.7;
@@ -3553,7 +3560,7 @@ html.vue-app.\--media\:small-phone body.-refreshed-layout .refreshed-domain-sele
    padding: 2rem 5rem
 }
 .network-error-overlay.\--dark-mode {
-   background: #121212;
+   background: #2A3B67;
    color: hsla(0, 0%, 100%, .87)
 }
 .vue-app .notifications,
@@ -3859,9 +3866,13 @@ body.\--sidebar-layout .master-login-bar {
    background: #f7f7f7;
    color: #e1697f;
    font-weight: 600;
+   font-size: 1.2rem;
    text-align: center;
    -webkit-user-select: none;
    user-select: none
+}
+.app.\--theme-darkmode.\--trial-license .trial-license {
+   background-color: var(--bg-title);
 }
 .app-content {
    min-height: calc(100vh - 1px);
@@ -4227,7 +4238,7 @@ html.vue-app.dir\:rtl .input-checkbox.\--inverted .input-checkbox-label {
    max-height: 100%
 }
 .dropzoneFile.\--dark>div {
-   background: #121212;
+   background: #2A3B67;
    transition: background .3s ease
 }
 .dropzoneFile.\--dark>.remove-button.remove-button {
@@ -7004,7 +7015,7 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
    transition: transform .3s ease;
 }
 .app.\--theme-darkmode .ui-toggle-switch .options .slider {
-   background-color: var(--color-active);
+   background-color: #7c92ca;
 }
 @media (max-width: 991px){
    .ui-toggle-switch .options .slider {
@@ -8152,7 +8163,7 @@ html.vue-app.mobile--disabled body.-has-overlay {
 }
 .vue-app .type\:xs.type\:xs {
    font-size: 1rem;
-   line-height: 1.67
+   line-height: 1.6
 }
 .vue-app .width\:100\%.width\:100\% {
    width: 100%
@@ -8524,7 +8535,7 @@ body.-preloader-active #preloader {
 }
 body.-preloader-active.-preloader-dark-mode #preloader {
    color: hsla(0, 0%, 100%, .87);
-   background: #121212
+   background: #2A3B67
 }
 body.-preloader-active.-preloader-dark-mode #preloader a {
    color: #01a2de !important

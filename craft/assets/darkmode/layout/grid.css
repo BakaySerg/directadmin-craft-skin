@@ -154,7 +154,7 @@ html.vue-app.vue-app .check-group-dropdown {
 }
 
 html.vue-app.vue-app .dialog .dialog-header {
-   background-color: var(--bg-title);
+   background-color: var(--bg-main);
    color: hsla(0, 0%, 100%, .87);
    text-transform: unset;
    border-bottom: 1px solid
@@ -179,7 +179,7 @@ html.vue-app.vue-app .dialog .dialog-content .dialog-content-wrapper {
 }
 
 html.vue-app.vue-app .dialog .dialog-buttons {
-   background-color: var(--bg-title)
+   background-color: var(--bg-main)
 }
 
 html.vue-app.vue-app .button.-theme-light {
@@ -378,12 +378,12 @@ html.vue-app.vue-app .c\:txt\:gray {
 }
 
 html.vue-app.vue-app .c\:bg\:gray2 {
-   background-color: #1b1b1b
+   background-color: var(--bg)
 }
 
 html.vue-app.vue-app .c\:txt\:content,
 html.vue-app.vue-app .c\:txt\:neutral {
-   color: hsla(0, 0%, 100%, .58)
+   color: #e3e3e3
 }
 
 html.vue-app.vue-app .scrollbar\:primary::-webkit-scrollbar-thumb {
@@ -427,7 +427,7 @@ html.vue-app.vue-app .app.--theme-darkmode .userbar .userbar-button .userbar-but
 }
 
 html.vue-app.vue-app .app.--theme-darkmode .userbar .userbar-dropdown {
-   background: var(--bg-title);
+   background: var(--bg);
    border-color: hsla(0, 0%, 100%, .2)
 }
 
@@ -471,7 +471,8 @@ html.vue-app.vue-app .app.--theme-darkmode .dashboardTab.dashboardTab.mobile:not
 }
 
 html.vue-app.vue-app .app.--theme-darkmode .dashboardTab .widget-content .user-stats-widget>div {
-   border-color: hsla(0, 0%, 100%, .2)
+   border-color: hsla(0, 0%, 100%, .2);
+   background-color: rgba(0,0,1,.1);
 }
 
 html.vue-app.vue-app .app.--theme-darkmode .ui-pre.log-content {
@@ -814,7 +815,7 @@ html.vue-app body.--grid-layout.--grid-layout {
 html.vue-app body.--grid-layout.--grid-layout .app-header {
    background: var(--bg);
    border-bottom-color: hsla(0, 0%, 100%, .38);
-   box-shadow: -1px 3px 10px rgba(30,23,104,.4);
+   box-shadow: -1px 3px 10px rgba(30,23,40,.3);
 }
 
 html.vue-app body.--grid-layout.--grid-layout .app-header .header-logo {
@@ -889,7 +890,7 @@ html.vue-app body.--grid-layout.--grid-layout .icons-wrapper-overlay .overlay-co
 }
 
 html.vue-app body.--grid-layout.--grid-layout .breadcrumbs {
-   background: var(--bg-title);
+   background: var(--bg-main);
    color: hsla(0, 0%, 100%, .87)
 }
 

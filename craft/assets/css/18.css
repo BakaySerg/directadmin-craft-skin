@@ -622,7 +622,11 @@ html.vue-app .standard-2021-layout .external-widget {
 }
 .license-widget {
     background: #fff;
-    border-radius: 25px
+    overflow: hidden;
+}
+.app.\--theme-darkmode .license-widget {
+    background-color: transparent;
+    padding: 1rem;
 }
 .license-widget .license-widget-header {
     height: 6rem;

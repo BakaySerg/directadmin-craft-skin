@@ -192,13 +192,13 @@ html.vue-app.vue-app .ui-tabs {
 }
 
 html.vue-app.vue-app .ui-tabs .ui-tabs-header-tab {
-   background: #1f1f1f;
+   background: var(--bg-title);
    border-color: hsla(0, 0%, 100%, .2);
    border-left-color: hsla(0, 0%, 100%, .2) !important
 }
 
 html.vue-app.vue-app .ui-tabs .ui-tabs-header-tab.active {
-   background: var(--bg-title)
+   background: var(--bg)
 }
 
 html.vue-app.vue-app .badge.-theme-danger,

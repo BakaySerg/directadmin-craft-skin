@@ -265,15 +265,12 @@ html.vue-app.mobile .app.--theme-darkmode .app-content>.header>.header-top .user
    color: hsla(0, 0%, 100%, .87)
 }
 html.vue-app.mobile .app.--theme-darkmode .dashboard-mobile .dashboardTab.mobile {
-   background: #202F55 !important;
+   background: #2A3B67 !important;
    color: hsla(0, 0%, 100%, .87);
    border-color: hsla(0, 0%, 100%, .2)
 }
 html.vue-app.mobile .app.--theme-darkmode .ui-vertical-table-row {
    background: #202F55
-}
-html.vue-app.mobile .app.--theme-darkmode .ui-vertical-table-row.--odd {
-   background: #1f1f1f
 }
 html.vue-app.mobile .app.--theme-darkmode .ui-vertical-table-row .ui-vertical-table-cell {
    border-color: hsla(0, 0%, 100%, .2)
