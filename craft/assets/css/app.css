@@ -919,7 +919,7 @@ html.vue-app.dir\:rtl .search .autocomplete input[type=text] {
    border-color: #e0e0e0
 }
 .vue-app .search .autocomplete input[type=text]::placeholder {
-   color: #c9cacb
+   color: #e0e0e0
 }
 .vue-app .search .options-icon,
 .vue-app .search .search-icon {
