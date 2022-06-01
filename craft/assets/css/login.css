@@ -7,6 +7,7 @@
    background: #ff0;
    color: #000;
    font-weight: 600;
+   font-size: .8rem;
    text-align: center;
    -webkit-user-select: none;
    user-select: none
@@ -114,7 +115,6 @@
 }
 
 .Box__Form {
-   background: #fff;
    display: flex;
    flex-direction: column;
    border-bottom-left-radius: 6px;
@@ -237,9 +237,6 @@
 }
 
 body {
-   background-image: url(/images/background.svg);
-   background-size: cover;
-   background-repeat: no-repeat;
    font-family: Montserrat, sans-serif;
    margin: 0;
    padding: 0
@@ -248,11 +245,14 @@ body {
 .Overlay {
    height: 100vh;
    overflow: auto;
-   background: rgba(97, 189, 246, .85);
+   background-color: #F7F7F7;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center
+}
+.Overlay.\--dark {
+   background-color: #202F55;
 }
 
 @media (max-width:480px) {
@@ -281,7 +281,6 @@ body {
    align-items: center;
    padding: 37px 54px 60px;
    position: relative;
-   zoom: .8
 }
 
 @media (max-width:480px) {
@@ -721,21 +720,14 @@ body {
    margin-top: 22px
 }
 
-.Overlay.\--dark {
-   background: rgba(22, 26, 33, .85)
-}
-
 .Overlay.\--dark .Wrapper {
-   background: #262a33
+   background: #2A3B67
 }
 
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Header .Box__Header__Text {
    background-image: url(/images/header-dark.svg)
 }
 
-.Overlay.\--dark .Wrapper>.Login.Box .Box__Form {
-   background-color: #262a33
-}
 
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Button:focus {
    outline: none
@@ -747,9 +739,7 @@ body {
 
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.Input__Text,
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.InputPassword__Input {
-   background-color: #262a33;
    border-color: #697388;
-   color: #697388
 }
 
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.Input__Text::placeholder,

@@ -4155,6 +4155,8 @@ html.vue-app.dir\:rtl .inputCheck-label {
    align-items: center;
    cursor: pointer;
    margin-right: 14px;
+}
+.vue-app .input-checkbox:not(.details-tab .input-checkbox) {
    margin-left: 0 !important;
 }
 .vue-app .input-checkbox.\--disabled .input-checkbox-control {
