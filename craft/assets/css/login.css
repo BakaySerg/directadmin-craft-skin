@@ -1,18 +1,22 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
 .\--trial-license {
    display: flex;
    flex-direction: column
 }
-
 .\--trial-license .trial-license {
-   background: #ff0;
+   background: #00c4f2;
    color: #000;
-   font-weight: 600;
    font-size: .8rem;
    text-align: center;
    -webkit-user-select: none;
-   user-select: none
+   user-select: none;
+   z-index: 1;
+   margin-bottom: -0.92rem;
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -21,7 +25,6 @@
    src: url(/assets/fonts/montserrat-cyrillic-ext-400-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-400-normal.woff) format("woff");
    unicode-range: u+0460-052f, u+1c80-1c88, u+20b4, u+2de0-2dff, u+a640-a69f, u+fe2e-fe2f
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -30,7 +33,6 @@
    src: url(/assets/fonts/montserrat-cyrillic-400-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-400-normal.woff) format("woff");
    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -39,7 +41,6 @@
    src: url(/assets/fonts/montserrat-vietnamese-400-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-400-normal.woff) format("woff");
    unicode-range: u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169, u+01a0-01a1, u+01af-01b0, u+1ea0-1ef9, u+20ab
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -48,7 +49,6 @@
    src: url(/assets/fonts/montserrat-latin-ext-400-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-400-normal.woff) format("woff");
    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -57,7 +57,6 @@
    src: url(/assets/fonts/montserrat-latin-400-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-400-normal.woff) format("woff");
    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -66,7 +65,6 @@
    src: url(/assets/fonts/montserrat-cyrillic-ext-500-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-500-normal.woff) format("woff");
    unicode-range: u+0460-052f, u+1c80-1c88, u+20b4, u+2de0-2dff, u+a640-a69f, u+fe2e-fe2f
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -75,7 +73,6 @@
    src: url(/assets/fonts/montserrat-cyrillic-500-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-500-normal.woff) format("woff");
    unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -84,7 +81,6 @@
    src: url(/assets/fonts/montserrat-vietnamese-500-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-500-normal.woff) format("woff");
    unicode-range: u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169, u+01a0-01a1, u+01af-01b0, u+1ea0-1ef9, u+20ab
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -93,7 +89,6 @@
    src: url(/assets/fonts/montserrat-latin-ext-500-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-500-normal.woff) format("woff");
    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff
 }
-
 @font-face {
    font-family: Montserrat;
    font-style: normal;
@@ -102,68 +97,64 @@
    src: url(/assets/fonts/montserrat-latin-500-normal.woff2) format("woff2"), url(/assets/fonts/montserrat-all-500-normal.woff) format("woff");
    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd
 }
-
 .Box__Header {
-   margin-bottom: 14px;
-   height: 120px;
-   width: 80%;
-   margin-left: 10%;
+   width: 227px;
+   height: 46px;
+   margin: 20px auto 2.8em;
    background: url(/assets/img/logo.svg);
    background-repeat: no-repeat;
    background-size: contain;
    background-position: 50% 50%
 }
-
 .Box__Form {
    display: flex;
    flex-direction: column;
    border-bottom-left-radius: 6px;
    border-bottom-right-radius: 6px
 }
-
-@media (max-width:480px) {
+@media (max-width: 600px){
+   .Box__Header {
+      width: 180px;
+      height: 40px;
+      margin: 40px auto 0;
+   }
+}
+@media (max-width:600px) {
    .Box {
       width: 100%;
       margin-top: 0;
       margin-bottom: 0;
-      flex-grow: 1;
+      flex-grow: .7;
       display: flex;
       flex-direction: column
    }
-
    .Box__Form,
    .Box__Header {
       border-radius: 0
    }
-
    .Box__Form {
       background: transparent;
-      flex-grow: 1;
+      flex-grow: .68;
       justify-content: center
    }
 }
-
 .Overlay.\--dark .Box .Box__Header {
    background-image: url(/assets/img/logo_white.svg)
 }
-
 .ForgotPasswordBlock {
    font-size: 13px;
    margin-top: 14px
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
    .ForgotPasswordBlock {
       color: #61bdf6;
       font-weight: 600;
       padding-bottom: 1rem
    }
 }
-
 .Spacer {
    flex-grow: 1
 }
-
 .DateTimeBlock {
    font-size: 13px;
    position: absolute;
@@ -171,20 +162,18 @@
    right: 0;
    left: 0;
    text-align: center;
-   padding: 20px
+   padding: 16px 10px 28px
 }
 
-@media (max-width:480px) {
+@media (max-width:600px) {
    .DateTimeBlock {
       color: #61bdf6;
       position: static
    }
 }
-
 .DateTimeBlock.\--out-of-sync {
    color: #d77272
 }
-
 .ExpiredCheck {
    font-size: 13px;
    font-weight: 500;
@@ -198,15 +187,14 @@
    user-select: none
 }
 
-@media (max-width:480px) {
+@media (max-width:600px) {
    .ExpiredCheck {
       font-weight: 700
    }
 }
-
 .Button {
-   margin-top: 28px;
-   background-color: #61bdf6;
+   margin-top: 53px;
+   background-color: #5FB456;
    -webkit-user-select: none;
    user-select: none;
    display: inline-block;
@@ -216,32 +204,33 @@
    cursor: pointer;
    white-space: nowrap;
    text-decoration: none;
-   border-radius: 10px;
+   border-radius: 3px;
    color: #fff;
    font-weight: 500;
-   font-size: 20px;
-   line-height: 40px;
-   letter-spacing: .428571px;
-   padding: 20px;
-   text-align: center
+   font-size: 18px;
+   letter-spacing: .03em;
+   padding: 17px;
+   text-align: center;
+   -webkit-tap-highlight-color: transparent;
+   transition: .4s;
 }
-
+.Button:hover {
+   opacity: 0.88;
+}
 .Button .SuccessMessage {
    display: flex;
    align-items: center;
    justify-content: center
 }
-
 .Button .SuccessMessage>.svg-icon {
    margin-right: .5rem
 }
-
 body {
    font-family: Montserrat, sans-serif;
    margin: 0;
-   padding: 0
+   padding: 0;
+   font-size: 16px;
 }
-
 .Overlay {
    height: 100vh;
    overflow: auto;
@@ -249,20 +238,22 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center
+   justify-content: center;
+   padding: 0 15px;
 }
 .Overlay.\--dark {
    background-color: #202F55;
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
+   .Button {
+      padding: 16px;
+   }
    .Overlay {
       width: 100vw;
-      height: unset;
+      overflow: hidden;
       min-height: 100vh
    }
 }
-
 .Overlay .TrialBox {
    background: #0083b4;
    color: #fff;
@@ -271,19 +262,21 @@ body {
    padding: .25rem 0;
    font-size: .85rem
 }
-
 .Overlay .Wrapper {
    background: #fff;
-   border-radius: 40px;
+   border-radius: 3px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding: 37px 54px 60px;
+   padding: 37px 54px 67px;
    position: relative;
+   flex-grow: 0.08;
+   width: 100%;
+   max-width: 1408px;
+   box-shadow: -1px 1px 10px rgba(30,23,104,.05);
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
    .Overlay .Wrapper {
       transform: none;
       padding: 15px;
@@ -292,94 +285,84 @@ body {
       height: 100vh;
       margin: 0;
       border-radius: 0;
-      zoom: unset
    }
 }
-
+.Login.Box {
+   width: 100%;
+   max-width: 550px;
+}
 .Input {
    position: relative;
    display: flex;
    margin-top: 6px;
-   min-width: 500px
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
    .Input {
       min-width: unset
    }
 }
-
 .Input.\--align-right {
    justify-content: flex-end
 }
-
 .Input>input[type=password],
 .Input>input[type=text] {
    font-family: Montserrat, sans-serif;
    border: 1px solid #dce2ea;
-   border-radius: 10px;
+   border-radius: 3px;
+   height: 54px;
    padding: 15px 19px;
-   font-size: 18px;
-   line-height: 40px;
-   letter-spacing: .428571px;
-   color: #697388;
+   font-size: 16px;
+   letter-spacing: .02em;
+   color: #a1a9b9;
    font-weight: 500;
-   flex-grow: 1
+   flex-grow: 1;
+   width: 100%;
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
 
    .Input>input[type=password],
    .Input>input[type=text] {
-      font-size: 16px
+      font-size: 14px;
+      height: 50px;
    }
 }
-
 .Input>input[type=password]:focus,
 .Input>input[type=text]:focus {
    outline: none
 }
-
 .Input>input[type=password]::-ms-clear,
 .Input>input[type=password]::-ms-reveal,
 .Input>input[type=text]::-ms-clear,
 .Input>input[type=text]::-ms-reveal {
    display: none
 }
-
 .Input>input[type=password]::placeholder,
 .Input>input[type=text]::placeholder {
    font-weight: 400;
-   font-size: 18px;
-   line-height: 40px;
-   letter-spacing: .428571px;
-   color: #697388
+   font-size: 16px;
+   letter-spacing: .02em;
+   color: #aaa
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
 
    .Input>input[type=password]::placeholder,
    .Input>input[type=text]::placeholder {
-      font-size: 16px
+      font-size: 15px
    }
 }
-
 .Input>input[type=password].error,
 .Input>input[type=text].error {
    background-color: #faeeee;
    color: #a66b6b
 }
-
 .Input>input[type=password].error:focus,
 .Input>input[type=text].error:focus {
    background-color: #faeeee
 }
-
 .Input>input[type=password].error::placeholder,
 .Input>input[type=text].error::placeholder {
    color: #a66b6b
 }
-
 .Input>.Input__Icon {
    position: absolute;
    display: flex;
@@ -389,49 +372,50 @@ body {
    right: 25px;
    bottom: 0
 }
-
+.Input .Input__Icon>svg {
+   max-width: 17px;
+}
+.Input [type=text]+.Input__Icon:after {
+   content: '';
+   position: absolute;
+   left: 86%;
+   top: 44%;
+   border-left: 2px solid #94b7c2;
+   height: 21px;
+   transform: rotate(-45deg) translate(-50%,-50%);
+}
 .Input>.Input__Icon.hoverable {
    cursor: pointer;
    will-change: transform;
    transition: transform .3s ease-in-out
 }
-
 .Input>.Input__Icon.hoverable:hover {
-   transform: scale(1.25)
+   transform: scale(1.1)
 }
-
 .InputLabel {
-   font-weight: 500;
-   font-size: 20px;
-   line-height: 40px;
-   letter-spacing: .428571px;
+   line-height: 1.5;
+   letter-spacing: .02em;
    color: #1d293b;
-   max-width: 500px
 }
-
 .InputLabel:not(:first-child) {
    margin-top: 24px
 }
-
 .InputHint {
    font-weight: 400;
    font-size: 12px;
    line-height: 26px;
-   letter-spacing: .428571px;
-   color: #697388;
+   letter-spacing: .02em;
+   color: #a1a9b9;
    padding: 0 19px;
    max-width: 462px
 }
-
 .InputHint.\--error {
    color: #d77272
 }
-
 .Input>.Input__Checkbox {
    display: flex;
    align-items: center
 }
-
 .Input>.Input__Checkbox>.Input__Icon {
    position: relative;
    top: unset;
@@ -446,7 +430,6 @@ body {
    color: #587d89;
    margin-right: 10px
 }
-
 .Link {
    text-decoration: none;
    font-size: 16px;
@@ -454,41 +437,34 @@ body {
    color: #61bdf6;
    margin-top: 14px
 }
-
 .Link,
 .Message {
    font-weight: 500;
    line-height: 40px;
    text-align: center
 }
-
 .Message {
    font-size: 18px;
    margin: 0;
    padding: 30px
 }
-
 .Message--error {
    color: #d77272
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
    .Message {
       font-size: 15px;
       line-height: 24px
    }
 }
-
 .Select {
    position: relative;
    z-index: 1
 }
-
 .Select,
 .Select * {
    box-sizing: border-box
 }
-
 .Select .Title {
    display: flex;
    align-items: center;
@@ -503,11 +479,9 @@ body {
    cursor: pointer;
    text-transform: capitalize
 }
-
 .Select .Title>.CaretIcon {
    margin-left: 10px
 }
-
 .Select .Dropdown {
    position: absolute;
    bottom: calc(100% + 5px);
@@ -516,14 +490,13 @@ body {
    min-width: 12rem;
    display: flex;
    flex-flow: column nowrap;
-   color: #697388;
+   color: #a1a9b9;
    background: #fff;
    border-radius: 10px;
    border: 1px solid #dce2ea;
    max-height: 15rem;
    overflow-y: auto
 }
-
 .Select .Dropdown_Item {
    display: block;
    text-align: center;
@@ -539,44 +512,36 @@ body {
    overflow-x: hidden;
    cursor: pointer
 }
-
 .Select .Dropdown_Item.current {
    color: #1e4b78;
    background-color: #fff
 }
-
 .Select .Dropdown_Item:hover {
    background-color: #f2f9fe;
    color: #61bdf6
 }
-
 .Select .Dropdown_Item:first-child {
    border-top-left-radius: 4px;
    border-top-right-radius: 4px
 }
-
 .Select.\--open .Title {
    border-top-left-radius: 0;
    border-top-right-radius: 0
 }
-
 .Select.\--open .Title .svg-icon {
    transform: rotateX(0deg)
 }
-
 .LanguageSelector {
    display: flex;
    flex-flow: row nowrap;
    align-items: center;
    margin-top: 14px
 }
-
 .LanguageSelector .Label {
    font-size: 16px;
    line-height: 40px;
    letter-spacing: .428571px
 }
-
 .ThemeSelector {
    position: absolute;
    display: flex;
@@ -584,13 +549,11 @@ body {
    right: 20px;
    top: 0
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
    .ThemeSelector {
       right: 10px
    }
 }
-
 .ThemeSelector>.Trigger {
    width: 60px;
    height: 10px;
@@ -601,13 +564,11 @@ body {
    border-radius: 50px;
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5), 0 1px 0 hsla(0, 0%, 100%, .2)
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
    .ThemeSelector>.Trigger {
       margin: 10px auto
    }
 }
-
 .ThemeSelector>.Trigger>span.mark {
    display: block;
    width: 16px;
@@ -622,15 +583,12 @@ body {
    transition: all .4s ease;
    cursor: pointer
 }
-
 .ThemeSelector>.Trigger>span.mark.-auto {
    transform: translateX(25px)
 }
-
 .ThemeSelector>.Trigger>span.mark.-enabled {
    transform: translateX(50px)
 }
-
 .ThemeSelector>.label {
    margin: 0 10px;
    font-size: .8rem;
@@ -638,68 +596,53 @@ body {
    color: #587d89;
    opacity: .5
 }
-
 .ThemeSelector>.label:hover {
    opacity: 1
 }
-
 .slide-fade-right-enter-active {
    transition: all .3s ease
 }
-
 .slide-fade-right-leave-active {
    transition: all .3s cubic-bezier(1, .5, .8, 1)
 }
-
 .slide-fade-right-enter {
    transform: translate(-50%);
    opacity: 0
 }
-
 .slide-fade-right-leave-to {
    transform: translateX(50%);
    opacity: 0
 }
-
 .slide-fade-left-enter-active {
    transition: all .3s ease
 }
-
 .slide-fade-left-leave-active {
    transition: all .3s cubic-bezier(1, .5, .8, 1)
 }
-
 .slide-fade-left-enter {
    transform: translateX(50%);
    opacity: 0
 }
-
 .slide-fade-left-leave-to {
    transform: translateX(-50%);
    opacity: 0
 }
-
 .fade-enter-active {
    transition: opacity .3s ease
 }
-
 .fade-leave-active {
    transition: opacity .3s cubic-bezier(1, .5, .8, 1)
 }
-
 .fade-enter,
 .fade-leave-to {
    opacity: 0
 }
-
 .slide-fade-bottom-enter-active {
    transition: all .2s ease
 }
-
 .slide-fade-bottom-leave-active {
    transition: all .2s cubic-bezier(1, .5, .8, 1)
 }
-
 .slide-fade-bottom-enter,
 .slide-fade-bottom-leave-to {
    transform: scaleY(.5);
@@ -707,107 +650,84 @@ body {
    opacity: 0;
    z-index: 0
 }
-
 .m\:top\:30 {
    margin-top: 30px
 }
-
 .m\:top\:10 {
    margin-top: 10px
 }
-
 .m\:top\:22 {
    margin-top: 22px
 }
-
 .Overlay.\--dark .Wrapper {
    background: #2A3B67
 }
-
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Header .Box__Header__Text {
    background-image: url(/images/header-dark.svg)
 }
 
-
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Button:focus {
    outline: none
 }
-
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.InputLabel {
-   color: #697388
+   color: #a1a9b9
 }
-
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.Input__Text,
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.InputPassword__Input {
-   border-color: #697388;
+   border-color: #a1a9b9;
 }
-
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.Input__Text::placeholder,
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.InputPassword__Input::placeholder {
-   color: #697388 !important;
+   color: #a1a9b9 !important;
    transition: color .3s ease
 }
-
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.Input__Text:focus,
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.InputPassword__Input:focus {
    border-color: unset;
    outline: none
 }
-
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.Input__Checkbox {
-   color: #697388
+   color: #a1a9b9
 }
-
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.Input__Checkbox>.Input__Icon {
-   border-color: #697388
+   border-color: #a1a9b9
 }
-
 .Overlay.\--dark .Wrapper>.Login.Box .Box__Form>.Input>.Input__Checkbox>.Input__Icon svg path {
-   fill: #697388
+   fill: #a1a9b9
 }
-
 .Overlay.\--dark .Wrapper>.LanguageSelector>.Label {
-   color: #697388
+   color: #a1a9b9
 }
-
 .Overlay.\--dark .Wrapper>.LanguageSelector>.Select>.Title {
    background-color: transparent;
-   color: #697388
+   color: #a1a9b9
 }
-
 .Overlay.\--dark .Wrapper>.LanguageSelector>.Select>.Title>svg>path {
    fill: #01a2de
 }
-
 .Overlay.\--dark .Wrapper>.LanguageSelector>.Select>.Dropdown {
    background: #262a33;
-   border-color: #697388
+   border-color: #a1a9b9
 }
-
 .Overlay.\--dark .Wrapper>.LanguageSelector>.Select>.Dropdown>.Dropdown_Item.current {
    background-color: rgba(6, 58, 83, .5);
    color: #fff
 }
-
 .Overlay.\--dark .Wrapper>.LanguageSelector>.Select>.Dropdown>.Dropdown_Item:hover {
    background-color: rgba(6, 58, 83, .7);
    color: #fff
 }
-
 .Overlay.\--dark .Wrapper>.ThemeSelector>.Trigger {
    background: #121212
 }
-
 .Overlay.\--dark .Wrapper>.ThemeSelector>.label {
    transition: color .3s ease;
    color: #fff
 }
-
 .Overlay.\--dark .DateTimeBlock {
-   color: #697388
+   color: #a1a9b9
 }
-
-@media (max-width:480px) {
+@media (max-width:600px) {
    .Overlay.\--dark {
       background-image: unset;
       background-color: #121212

@@ -7843,7 +7843,7 @@ html.vue-app.mobile--disabled body.-has-overlay {
    color: #34383c
 }
 .vue-app .c\:txt\:primary.c\:txt\:primary {
-   color: var(--primary)
+   color: var(--color-active)
 }
 .vue-app .c\:txt\:primary\:dark.c\:txt\:primary\:dark {
    color: var(--primary-dark)
@@ -7921,7 +7921,7 @@ html.vue-app.mobile--disabled body.-has-overlay {
    background-color: #34383c
 }
 .vue-app .c\:bg\:primary.c\:bg\:primary {
-   background-color: var(--primary)
+   background-color: var(--primary-dark-light)
 }
 .vue-app .c\:bg\:primary\:dark.c\:bg\:primary\:dark {
    background: var(--primary-dark)

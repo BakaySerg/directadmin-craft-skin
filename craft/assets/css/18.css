@@ -193,7 +193,10 @@ html.vue-app.dir\:rtl .input-ip .input-ip-mask {
     padding: 1.5rem;
     border: 1px solid #e0e0e0;
     border-radius: 3px;
-    background-color: rgba(255,255,255,.6);
+    background-color: rgba(0,0,1,.01);
+}
+.app.\--theme-darkmode .reseller-stats-widget>div {
+    background-color: rgba(0,0,1,.06);
 }
 .reseller-stats-widget>div>:not(:last-child) {
     margin-bottom: 1rem
