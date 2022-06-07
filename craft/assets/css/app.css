@@ -3880,7 +3880,7 @@ body.\--sidebar-layout .master-login-bar {
    transition-property: filter
 }
 .app-content.-is-blurred {
-   filter: grayscale(1)
+   filter: grayscale(0.14)
 }
 .app-content>main {
    display: flex;
@@ -4062,7 +4062,7 @@ html.vue-app.dir\:rtl .pageSection {
    white-space: nowrap
 }
 .vue-app .inputCheck.-is-disabled {
-   filter: grayscale(.5);
+   filter: grayscale(.4);
    opacity: .75 !important;
    cursor: default;
    transition-duration: 0ms
@@ -4145,7 +4145,7 @@ html.vue-app.dir\:rtl .inputCheck-label {
    color: var(--primary-dark)
 }
 .vue-app .input-checkbox.\--disabled {
-   filter: grayscale(.5);
+   filter: grayscale(.4);
    opacity: .75 !important;
    cursor: default;
    transition-duration: 0ms
@@ -4275,7 +4275,7 @@ html.vue-app.dir\:rtl .input-checkbox.\--inverted .input-checkbox-label {
    min-height: 24rem
 }
 .vue-app .input-radio.\--disabled {
-   filter: grayscale(.5);
+   filter: grayscale(.4);
    opacity: .75 !important;
    cursor: default;
    transition-duration: 0ms
@@ -4815,7 +4815,7 @@ html.vue-app.dir\:rtl .Select__Dropdown__Items__Item {
 }
 .vue-app .button.-is-disabled,
 .vue-app .button:disabled {
-   filter: grayscale(.5);
+   filter: grayscale(.4);
    opacity: .75 !important;
    cursor: default;
    transition-duration: 0ms
@@ -5172,10 +5172,10 @@ html.vue-app.dir\:rtl .dialog .dialog-buttons>.button {
    max-width: unset
 }
 .vue-app .drawer:not(.noShadow) {
-   box-shadow: -2px 0 34px -2px rgba(0, 0, 0, .1)
+   box-shadow: -2px 0 34px -2px rgba(0, 0, 0, .14)
 }
 html.vue-app.dir\:rtl .drawer:not(.noShadow) {
-   box-shadow: 2px 0 34px 2px rgba(0, 0, 0, .1)
+   box-shadow: 2px 0 34px 2px rgba(0, 0, 0, .14)
 }
 .vue-app .drawer.right {
    right: 0
@@ -7432,7 +7432,7 @@ html.vue-app.dir\:rtl .ui-tabs .ui-tabs-header .ui-tabs-header-tab:not(:last-chi
 .vue-app input:disabled,
 .vue-app select:disabled,
 .vue-app textarea:disabled {
-   filter: grayscale(.5);
+   filter: grayscale(.4);
    opacity: .75 !important;
    cursor: default;
    transition-duration: 0ms
@@ -8492,7 +8492,7 @@ td .scrollbar\:primary {
    padding: 0 1.5rem;
    font-size: 1.4rem;
    color: #34383c;
-   filter: grayscale(.5);
+   filter: grayscale(.4);
    opacity: .75 !important;
    cursor: default;
    font-weight: 700;
